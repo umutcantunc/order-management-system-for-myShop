@@ -1,0 +1,36 @@
+PDF'lerde Türkçe Karakter Desteği İçin Font Kurulum Talimatları
+===============================================================
+
+PDF'lerde Türkçe karakterlerin (ğ, ş, ı, ö, ç, ü) düzgün görünmesi için 
+NotoSans veya OpenSans fontunu asset olarak eklemeniz gerekiyor.
+
+ADIMLAR:
+--------
+
+1. NotoSans-Regular.ttf fontunu indirin:
+   - GitHub: https://github.com/google/fonts/raw/main/ofl/notosans/NotoSans-Regular.ttf
+   - Veya Google Fonts: https://fonts.google.com/specimen/Noto+Sans
+   - İndirdiğiniz dosyayı "NotoSans-Regular.ttf" olarak kaydedin
+
+2. Font dosyasını projeye ekleyin:
+   - İndirdiğiniz "NotoSans-Regular.ttf" dosyasını 
+     "assets/fonts/" klasörüne kopyalayın
+   - Eğer "assets/fonts/" klasörü yoksa oluşturun
+
+3. Uygulamayı yeniden build edin:
+   - flutter pub get
+   - flutter build apk --release
+   - flutter build web --release
+
+NOTLAR:
+-------
+- Font dosyası yaklaşık 200-300 KB boyutundadır
+- Eğer NotoSans bulamazsanız, OpenSans-Regular.ttf de kullanılabilir
+- Font dosyası eklendikten sonra PDF'lerde Türkçe karakterler düzgün görünecektir
+- Font dosyası yoksa varsayılan font kullanılacak (Türkçe karakterleri desteklemeyebilir)
+
+ALTERNATIF:
+----------
+Eğer font dosyasını manuel olarak eklemek istemiyorsanız, 
+kod zaten hazır. Sadece font dosyasını "assets/fonts/" klasörüne 
+eklemeniz yeterli.

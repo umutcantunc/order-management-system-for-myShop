@@ -1,0 +1,43 @@
+{
+    "name": "Tunç App",
+    "short_name": "Tunç App",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#2C2C2C",
+    "theme_color": "#2C2C2C",
+    "description": "Tunç Nur Branda Yönetim Sistemi",
+    "orientation": "portrait-primary",
+    "prefer_related_applications": false,
+    "scope": "/",
+    "dir": "ltr",
+    "lang": "tr",
+    "icons": [
+        {
+            "src": "icons/Icon-192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "icons/Icon-512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "icons/Icon-maskable-192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "maskable"
+        },
+        {
+            "src": "icons/Icon-maskable-512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "maskable"
+        }
+    ],
+    "screenshots": [],
+    "categories": ["business", "productivity"],
+    "shortcuts": []
+}

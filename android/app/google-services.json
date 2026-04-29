@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "590959884913",
+    "project_id": "tuncnurbranda-a93a5",
+    "storage_bucket": "tuncnurbranda-a93a5.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:590959884913:android:4a85cba9833231aea139d0",
+        "android_client_info": {
+          "package_name": "com.tuncnurbranda"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB8F_5sjFM2L3qJEJCNW3jj2nSBSmTsUdE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

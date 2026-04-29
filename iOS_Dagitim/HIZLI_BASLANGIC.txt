@@ -1,0 +1,27 @@
+iOS DAĞITIMI İÇİN HIZLI REHBER
+================================
+
+⚠️ Windows'ta iOS build yapılamaz! Mac gereklidir.
+
+EN KOLAY ÇÖZÜM: TestFlight
+===========================
+
+ADIM 1: Mac Bul/Kirala
+-----------------------
+- MacInCloud.com (aylık ~$20-50)
+- AWS Mac Instance (saatlik ~$1-2)
+- Veya bir Mac sahibinden yardım
+
+ADIM 2: Mac'te Build Yap
+-------------------------
+1. Projeyi Mac'e kopyala
+2. Terminal: flutter build ipa --release
+3. Xcode: Product > Archive > Distribute App > TestFlight
+
+ADIM 3: TestFlight'a Yükle
+---------------------------
+- App Store Connect'te test kullanıcıları ekle
+- WhatsApp'tan davet linkini paylaş
+- Kullanıcılar tek tıkla kurar!
+
+DETAYLI TALİMATLAR: OKU_BENI.txt dosyasına bakın

@@ -1,0 +1,91 @@
+FIREBASE HOSTING - PWA DAĞITIM REHBERİ
+========================================
+
+iOS Safari için optimize edilmiş PWA (Progressive Web App) hazır!
+
+✅ YAPILAN OPTİMİZASYONLAR:
+===========================
+
+1. ✅ Standalone Mode Aktif
+   - iOS Safari'de adres çubuğu ve alt bar gizlenecek
+   - Tam ekran deneyim
+
+2. ✅ Status Bar Optimizasyonu
+   - Status bar rengi: #2C2C2C (Uygulama temasına uygun)
+   - black-translucent modu aktif
+   - Status bar içeriğin üzerine gelir (edge-to-edge)
+
+3. ✅ iOS Icon Optimizasyonu
+   - Tüm iOS cihaz boyutları için icon tanımları eklendi
+   - Ana ekrana eklendiğinde düzgün görünecek
+   - Mevcut icon'lar kullanılıyor (Icon-192.png, Icon-512.png)
+
+4. ✅ Safe Area Desteği
+   - iOS notch ve güvenli alanlar için padding eklendi
+   - İçerik status bar ve home indicator'ın altına girmeyecek
+
+5. ✅ Manifest.json Optimizasyonu
+   - Standalone display mode
+   - Theme color: #2C2C2C
+   - Background color: #2C2C2C
+   - Tüm gerekli icon'lar tanımlı
+
+FIREBASE HOSTING'E YÜKLEME:
+============================
+
+1. Firebase CLI'yi kurun (eğer yoksa):
+   npm install -g firebase-tools
+
+2. Firebase'e giriş yapın:
+   firebase login
+
+3. Projeyi Firebase'e bağlayın:
+   firebase init hosting
+
+4. Build klasörünü seçin:
+   - Public directory: build/web
+   - Single-page app: Yes
+   - Automatic builds: No (manuel build)
+
+5. Web uygulamasını build edin:
+   flutter build web --release
+
+6. Firebase Hosting'e deploy edin:
+   firebase deploy --only hosting
+
+7. URL'nizi paylaşın:
+   https://[PROJECT-ID].web.app
+   veya
+   https://[PROJECT-ID].firebaseapp.com
+
+iOS KULLANICILARI İÇİN TALİMATLAR:
+===================================
+
+1. Safari'de uygulamayı açın
+2. Paylaş butonuna (kare ok) tıklayın
+3. "Ana Ekrana Ekle" seçeneğini seçin
+4. İkon ve ismi kontrol edin
+5. "Ekle" butonuna tıklayın
+6. Ana ekrandan uygulamayı açın
+7. Standalone modda çalışacak (adres çubuğu yok!)
+
+TEST ETME:
+==========
+
+1. iOS Safari'de uygulamayı açın
+2. Paylaş > Ana Ekrana Ekle
+3. Ana ekrandan açın
+4. Adres çubuğu ve alt bar gizlenmiş olmalı
+5. Status bar uygulama temasına uygun görünmeli
+6. Icon düzgün görünmeli
+
+NOTLAR:
+=======
+
+- iOS'ta PWA'lar Safari'de çalışır (Chrome değil)
+- Standalone mode sadece "Ana Ekrana Ekle" ile çalışır
+- Normal Safari'de açıldığında adres çubuğu görünür
+- Status bar rengi uygulama temasına (#2C2C2C) uygun ayarlandı
+- Icon'lar mevcut web/icons klasöründeki dosyalar kullanılıyor
+
+Son Güncelleme: ${DateTime.now().toString().split(' ')[0]}

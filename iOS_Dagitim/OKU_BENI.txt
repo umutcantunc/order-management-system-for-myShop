@@ -1,0 +1,83 @@
+iOS UYGULAMA DAĞITIMI - WINDOWS KULLANICILARI İÇİN
+===================================================
+
+⚠️ ÖNEMLİ: Windows'ta iOS build yapılamaz!
+iOS uygulamaları sadece Mac bilgisayarda build edilebilir.
+
+ÇÖZÜM: TestFlight Kullanın (En Kolay Yöntem)
+==============================================
+
+TestFlight, Apple'ın resmi test dağıtım sistemidir ve kullanıcılar 
+tek tıkla uygulamayı kurabilirler!
+
+NASIL ÇALIŞIR:
+--------------
+1. Mac bilgisayarda (veya Mac kiralayarak) uygulamayı TestFlight'a yüklersiniz
+2. App Store Connect'te test kullanıcılarını ekleyersiniz
+3. WhatsApp'tan TestFlight davet linkini paylaşırsınız
+4. Kullanıcılar linke tıklar → TestFlight uygulaması açılır → Tek tıkla kurar!
+
+MAC BULMA/KIRALAMA SEÇENEKLERİ:
+================================
+
+SEÇENEK 1: Mac Kiralama Servisleri (Önerilen)
+-----------------------------------------------
+- MacInCloud.com (Aylık ~$20-50)
+- AWS Mac Instance (Saatlik ~$1-2)
+- MacStadium
+- Veya bir Mac sahibinden yardım isteyin
+
+SEÇENEK 2: Mac Sahibi Bulma
+-----------------------------
+- Bir arkadaşınızdan/çalışanınızdan Mac kullanımı isteyin
+- Sadece bir kez build yapıp TestFlight'a yüklemeniz yeterli
+- Sonrasında güncellemeleri de Mac'te yaparsınız
+
+MAC'TE BUILD YAPMA ADIMLARI:
+=============================
+
+1. Projeyi Mac'e kopyalayın (USB, cloud, vs.)
+2. Mac'te Terminal açın
+3. Proje klasörüne gidin
+4. Şu komutu çalıştırın:
+   flutter build ipa --release
+
+5. Xcode'u açın
+6. ios/Runner.xcworkspace dosyasını açın
+7. Product > Archive
+8. Organizer penceresi açılır
+9. "Distribute App" butonuna tıklayın
+10. "App Store Connect" seçin
+11. "Upload" seçin
+12. TestFlight'a yüklenir!
+
+TESTFLIGHT KULLANICI EKLEME:
+============================
+
+1. App Store Connect'e giriş yapın (developer.apple.com)
+2. Uygulamanızı seçin
+3. TestFlight sekmesine gidin
+4. "Internal Testing" veya "External Testing" seçin
+5. Test kullanıcılarını ekleyin (e-posta adresleri)
+6. Otomatik davet e-postası gönderilir
+7. WhatsApp'tan da davet linkini paylaşabilirsiniz
+
+KULLANICILAR İÇİN:
+==================
+1. TestFlight uygulamasını App Store'dan indirin (ücretsiz)
+2. WhatsApp'tan gelen davet linkine tıklayın
+3. TestFlight açılır ve uygulama kurulur
+4. Tek tıkla kurulum tamamlanır!
+
+AVANTAJLAR:
+===========
+✅ Kullanıcılar tek tıkla kurabilir
+✅ Otomatik güncellemeler
+✅ Güvenli ve güvenilir (Apple'ın resmi sistemi)
+✅ Kolay kullanım
+✅ Ücretsiz (sadece Apple Developer hesabı gerekli - $99/yıl)
+
+NOT: Apple Developer hesabı olmadan TestFlight kullanılamaz.
+Ancak bu tek seferlik bir maliyettir ve tüm iOS uygulamalarınız için kullanılabilir.
+
+Son Güncelleme: ${DateTime.now().toString().split(' ')[0]}

@@ -1,0 +1,22 @@
+TUNC APP - ANDROID KURULUM TALİMATLARI
+========================================
+
+Bu klasördeki "tunc_app.apk" dosyasını Android telefonunuza kurmak için:
+
+1. APK dosyasını WhatsApp'tan indirin
+2. İndirilen dosyaya tıklayın
+3. "Bilinmeyen kaynaklardan uygulama yükleme" izni istenirse:
+   - Ayarlar > Güvenlik > Bilinmeyen kaynaklardan uygulama yükleme'yi açın
+   - Veya sadece bu uygulama için izin verin
+4. Kurulum tamamlandıktan sonra uygulamayı açın
+5. Giriş yapın ve kullanmaya başlayın
+
+NOT: Eğer eski bir sürüm yüklüyse, önce eski sürümü kaldırın, sonra yeni sürümü kurun.
+
+Sorun yaşarsanız:
+- Telefonunuzun Android sürümü 5.0 (Lollipop) veya üzeri olmalıdır
+- Yeterli depolama alanı olduğundan emin olun
+- İnternet bağlantınızın aktif olduğundan emin olun
+
+Dosya Boyutu: ~72 MB
+Son Güncelleme: ${DateTime.now().toString().split(' ')[0]}

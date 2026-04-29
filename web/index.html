@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--
+    If you are serving your web app in a path other than the root, change the
+    href value below to reflect the base path you are serving from.
+
+    The path provided below has to start and end with a slash "/" in order for
+    it to work correctly.
+
+    For more details:
+    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+
+    This is a placeholder for base href that will be replaced by the value of
+    the `--base-href` argument provided to `flutter build`.
+  -->
+  <base href="$FLUTTER_BASE_HREF">
+
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <meta name="description" content="Tunç Nur Branda Yönetim Sistemi">
+
+  <!-- PWA Meta Tags -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Tunç App">
+  <meta name="theme-color" content="#2C2C2C">
+  
+  <!-- iOS Icons - Multiple sizes for better compatibility -->
+  <link rel="apple-touch-icon" sizes="57x57" href="icons/Icon-192.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="icons/Icon-192.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="icons/Icon-192.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="icons/Icon-192.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="icons/Icon-192.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="icons/Icon-192.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="icons/Icon-192.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="icons/Icon-192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="icons/Icon-512.png">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <!-- Splash Screens for iOS -->
+  <link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" href="icons/Icon-192.png">
+  <link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)" href="icons/Icon-192.png">
+  <link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3)" href="icons/Icon-192.png">
+  <link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)" href="icons/Icon-192.png">
+  <link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2)" href="icons/Icon-192.png">
+  <link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3)" href="icons/Icon-192.png">
+  <link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2)" href="icons/Icon-512.png">
+  <link rel="apple-touch-startup-image" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2)" href="icons/Icon-512.png">
+  <link rel="apple-touch-startup-image" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2)" href="icons/Icon-512.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png"/>
+
+  <title>Tunç App</title>
+  <link rel="manifest" href="manifest.json">
+  
+  <style>
+    /* iOS Safari Standalone Mode için stil */
+    @supports (-webkit-touch-callout: none) {
+      body {
+        /* iOS'ta safe area için padding */
+        padding-top: env(safe-area-inset-top);
+        padding-bottom: env(safe-area-inset-bottom);
+        padding-left: env(safe-area-inset-left);
+        padding-right: env(safe-area-inset-right);
+      }
+    }
+    
+    /* Status bar için arka plan rengi - Uygulama temasına uygun */
+    html {
+      background-color: #2C2C2C;
+    }
+    
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #2C2C2C;
+      overflow: hidden;
+    }
+    
+    /* Loading screen */
+    .loading {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #2C2C2C;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+  </style>
+</head>
+<body>
+  <div class="loading" id="loading">
+    <div style="color: white; font-family: Arial, sans-serif; text-align: center;">
+      <p>Yükleniyor...</p>
+      <p id="loading-status" style="font-size: 12px; color: #888;">Firebase başlatılıyor...</p>
+    </div>
+  </div>
+  
+  <!--
+    FlutterFire (firebase_core / firebase_auth / cloud_firestore / firebase_storage / ...)
+    Web'de Firebase'i kendi bundle'ı üzerinden yönetir.
+
+    Bu yüzden burada ayrıca `firebase-*-compat.js` yüklemek genelde GEREKSİZDİR ve
+    çift-yükleme / global `firebase` nesnesi çakışmaları gibi zor teşhis hatalarına yol açabilir.
+
+    FCM service worker (`firebase-messaging-sw.js`) için de genelde ana sayfada compat
+    bundle şart değildir; gerekirse SW içinde importScripts ile yüklenir.
+  -->
+  
+  <script>
+    // Service Worker kaydı (FCM için)
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('/firebase-messaging-sw.js')
+          .then(function(registration) {
+            console.log('Service Worker kaydedildi:', registration.scope);
+          })
+          .catch(function(error) {
+            console.log('Service Worker kayıt hatası:', error);
+          });
+      });
+    }
+  </script>
+  
+  <script>
+    // Hata yakalama ve debug için
+    window.addEventListener('error', function(e) {
+      console.error('Global error:', e.error, e.filename, e.lineno);
+      const statusEl = document.getElementById('loading-status');
+      if (statusEl) {
+        statusEl.textContent = 'Hata: ' + (e.error ? e.error.message : 'Bilinmeyen hata');
+        statusEl.style.color = '#ff4444';
+      }
+    });
+    
+    window.addEventListener('unhandledrejection', function(e) {
+      console.error('Unhandled promise rejection:', e.reason);
+      const statusEl = document.getElementById('loading-status');
+      if (statusEl) {
+        statusEl.textContent = 'Hata: ' + (e.reason ? e.reason.toString() : 'Promise hatası');
+        statusEl.style.color = '#ff4444';
+      }
+    });
+    
+    // Flutter hatalarını console'a yazdır
+    const originalError = console.error;
+    console.error = function(...args) {
+      originalError.apply(console, args);
+      const statusEl = document.getElementById('loading-status');
+      if (statusEl && args.length > 0) {
+        const errorMsg = args[0].toString();
+        if (errorMsg.includes('Firebase') || errorMsg.includes('Error') || errorMsg.includes('Exception')) {
+          statusEl.textContent = 'Hata: ' + errorMsg.substring(0, 100);
+          statusEl.style.color = '#ff4444';
+        }
+      }
+    };
+    
+    function checkFlutterReadyToBoot() {
+      // FlutterFire kendi Firebase init'ini yapar; burada global `firebase` beklemiyoruz.
+      const statusEl = document.getElementById('loading-status');
+      if (statusEl) {
+        statusEl.textContent = 'Flutter yükleniyor...';
+      }
+      return true;
+    }
+    
+    // Flutter'ı başlat (FlutterFire Firebase init'ini yönetir)
+    function startFlutterApp() {
+      checkFlutterReadyToBoot();
+
+      const script = document.createElement('script');
+      script.src = 'flutter_bootstrap.js';
+      script.async = true;
+      script.onerror = function() {
+        console.error('Flutter bootstrap yüklenemedi!');
+        const statusEl = document.getElementById('loading-status');
+        if (statusEl) {
+          statusEl.textContent = 'Flutter yüklenemedi! Sayfayı yenileyin.';
+          statusEl.style.color = '#ff4444';
+        }
+      };
+      script.onload = function() {
+        console.log('Flutter bootstrap yüklendi');
+        const statusEl = document.getElementById('loading-status');
+        if (statusEl) {
+          statusEl.textContent = 'Flutter başlatılıyor...';
+        }
+      };
+      document.body.appendChild(script);
+    }
+    
+    // Sayfa yüklendiğinde Flutter'ı başlat
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', function() {
+        // Kısa gecikme: ilk paint + SW kaydı için
+        setTimeout(startFlutterApp, 200);
+      });
+    } else {
+      setTimeout(startFlutterApp, 200);
+    }
+  </script>
+  
+  <script>
+    // iOS Safari için standalone mode kontrolü
+    if (window.navigator.standalone === true) {
+      document.documentElement.classList.add('standalone');
+    }
+    
+    // Loading screen'i kaldır
+    window.addEventListener('flutter-first-frame', function() {
+      console.log('Flutter first frame rendered');
+      const loading = document.getElementById('loading');
+      if (loading) {
+        loading.style.display = 'none';
+      }
+    });
+    
+    // Flutter hatalarını yakala
+    window.addEventListener('flutter-error', function(e) {
+      console.error('Flutter error:', e.detail);
+      const statusEl = document.getElementById('loading-status');
+      if (statusEl) {
+        statusEl.textContent = 'Flutter hatası: ' + (e.detail ? e.detail.toString() : 'Bilinmeyen hata');
+        statusEl.style.color = '#ff4444';
+      }
+    });
+  </script>
+</body>
+</html>
