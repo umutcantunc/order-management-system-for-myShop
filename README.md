@@ -2,7 +2,7 @@
 
 [![Flutter](https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white)](https://flutter.dev/)
 [![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black)](https://firebase.google.com/)
-[![Web App](https://img.shields.io/badge/Web_App-Platform-blue?style=for-the-badge)]()
+[![Web App](https://img.shields.io/badge/Web_App-Platform-blue?style=for-the-badge)](https://tuncnurbranda-a93a5.web.app)
 
 Bu proje, açık hava ekipmanları ve branda üretimi yapan ticari bir işletmenin geleneksel kağıt-kalem tabanlı sipariş süreçlerini modernize etmek amacıyla geliştirilmiş, uçtan uca bir **B2B SaaS (Hizmet Yazılımı)** çözümüdür. 
 
@@ -57,7 +57,7 @@ Projeyi ve sistemi içeriden inceleyebilmeniz için yetkileri sınırlandırılm
 
 ---
 
-👨‍💻 Geliştirici
+👨‍💻 Geliştirici : 
 Umutcan Tunç
 
 LinkedIn: https://www.linkedin.com/in/umutcan-tunç-b44979331/?skipRedirect=true
