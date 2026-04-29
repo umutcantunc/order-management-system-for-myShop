@@ -4,7 +4,7 @@
 [![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black)](https://firebase.google.com/)
 [![Web App](https://img.shields.io/badge/Web_App-Platform-blue?style=for-the-badge)](https://tuncnurbranda-a93a5.web.app)
 
-Bu proje, açık hava ekipmanları ve branda üretimi yapan ticari bir işletmenin geleneksel kağıt-kalem tabanlı sipariş süreçlerini modernize etmek amacıyla geliştirilmiş, uçtan uca bir **B2B SaaS (Hizmet Yazılımı)** çözümüdür. 
+Bu proje, açık hava ekipmanları(Outdoor ürünler) ve branda üretimi yapan ticari bir işletmenin geleneksel kağıt-kalem tabanlı sipariş süreçlerini modernize etmek amacıyla geliştirilmiş, uçtan uca bir **B2B SaaS (Hizmet Yazılımı)** çözümüdür. 
 
 Fiziksel defterlere yazılan siparişlerin takibi, çizilen krokilerin kaybolması ve geçmiş verilere ulaşım zorluğu gibi operasyonel darboğazlar, bu proje ile tamamen dijitalleştirilmiş ve bulut tabanlı bir sisteme entegre edilmiştir.
 
