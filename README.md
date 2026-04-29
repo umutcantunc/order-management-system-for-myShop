@@ -16,8 +16,8 @@ Uygulamanın canlı sürümünü aşağıdaki bağlantıdan test edebilirsiniz:
 👉 **[tuncnurbranda-a93a5.web.app](https://tuncnurbranda-a93a5.web.app)**
 
 Projeyi ve sistemi içeriden inceleyebilmeniz için yetkileri sınırlandırılmış bir test personeli hesabı oluşturulmuştur:
-* **E-posta:** `demo@tuncnurbranda.com`
-* **Şifre:** `demo12345`
+* **E-posta:** ``
+* **Şifre:** ``
 *(Not: Bu hesap sadece "Personel" yetkilerine sahiptir. Veri silme veya admin paneline erişim gibi kritik fonksiyonlar güvenlik sebebiyle kapatılmıştır.)*
 
 ---
